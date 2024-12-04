@@ -1,0 +1,53 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+.blog-header {
+    background-color: #c5a574; /* Fondo color café */
+    border-bottom: 1px solid #4a4a4a; /* Línea negra inferior */
+    padding: 1px 0;
+  }
+  
+  .blog-header h1 {
+    color: #4a4a4a; /* Texto del título en negro */
+    font-weight: bold;
+    font-size: 2rem;
+
+  }
+  
+  .nav-link {
+    color: #ffffff !important; /* Texto blanco para los enlaces */
+    font-weight: 500;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+  }
+  
+  /* Sección Consejos */
+  .seccion-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c5a574;
+  }
+  
+  #seccion-comida img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Tema Oscuro */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .blog-header {
+    background-color: #c5a574; /* Café constante en tema oscuro */
+  }
+  
+  body.dark-mode .nav-link {
+    color: #000 !important; /* Cambiar enlaces a negro en modo oscuro */
+  }
+  

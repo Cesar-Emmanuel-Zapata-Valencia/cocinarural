@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/index.js" defer></script>
+    <title>La Cocina Rural</title>
+    <link rel="icon" href="./image/logo.ico">
+    <link rel="stylesheet" href="./css/style.css"> 
+    
+
+
+</head>
+<body>
+    <header>
+        <h1>LA COCINA RURAL</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="contenido/nuestragastronomia.html">Nuestra gastronomía</a>
+            <a href="contenido/Recetario.html">Recetario</a>
+            <a href="contenido/Consejosdecomida.html">Consejos de comida</a>
+            <a href="contenido/sobre nosotros.html">Sobre nosotros</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="food-index">Índice de la comida</div>
+        <div class="food-subtitle">La más conocida</div>
+        
+        <!-- Carrusel de comida -->
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="./image/tamales.jpg" alt="Tamales">
+                <div>Tamales</div>
+            </div>
+            <div class="carousel-item">
+                <img src="./image/pozole.jpg" alt="Pozole rojo">
+                <div>Pozole rojo</div>
+            </div>
+            <div class="carousel-item">
+                <img src="./image/barbacoa.jpg" alt="Barbacoa">
+                <div>Barbacoa</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="about">
+            <img src="./image/comidaMexicana.png" alt="Comida Hidalguense">
+            <div class="about-text">
+                La comida rural hidalguense es una rica manifestación de la tradición, la historia y los recursos naturales de esta región central de México.
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Recetario de videos -->
+        <h2>Recetario de comida rural</h2>
+        <div class="video-section">
+            <div class="video-item">
+                <h3>Receta del mole de olla</h3>
+                <video controls>
+                    <source src="./videos/moledeolla.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+            <div class="video-item">
+                <h3>Historia del mole de olla</h3>
+                <video controls>
+                    <source src="./videos/historiadelmoledeoll.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+            <div class="video-item">
+                <h3>Información del mole de olla</h3>
+                <video controls>
+                    <source src="./videos/Lainformacindelosing.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+        </div>
+
+        <!-- Cuestionario -->
+        <div class="quiz-section">
+            <h2>Contesta esta encuesta para saber si sabes sobre la comida </h2>
+            <a href="formulario.html">
+                <button>Formulario</button>
+            </a>
+        </div>
+        
+        <!-- Contenedor de contacto con los realizadores -->
+        <div class="contact-container">
+            <h2>Contáctanos</h2>
+            <div class="contact-item">
+                <strong>Cesar Emmanuel Zapata Valencia</strong> - Desarrollador web<br>
+                Correo: <a href="mailto:l22200793@pachuca.tecnm.mx">l22200793@pachuca.tecnm.mx</a><br>
+                Redes: <a href="https://instagram.com/cesarzv25" target="_blank">@cesarzv25</a>
+            </div>
+            <div class="contact-item">
+                <strong>José Alonso Godinez Franco</strong> - Diseñador gráfico<br>
+                Correo: <a href="mailto:l24200197@pachuca.tecnm.mx">l24200197@pachuca.tecnm.mx</a><br>
+                Redes: <a href="https://instagram.com/JoseAlonsoGF" target="_blank">@JoseAlonsoGF</a>
+            </div>
+            
+            <!-- Formulario de Contacto centrado -->
+            <form id="contactForm">
+                <div class="field">
+                    <label for="to_name">Nombre del destinatario</label>
+                    <input type="text" name="to_name" id="to_name" required>
+                </div>
+                <div class="field">
+                    <label for="from_name">Tu nombre</label>
+                    <input type="text" name="from_name" id="from_name" required>
+                </div>
+                <div class="field">
+                    <label for="message">Mensaje</label>
+                    <textarea name="message" id="message" required></textarea>
+                </div>
+                <div class="field">
+                    <label for="reply_to">Correo electrónico</label>
+                    <input type="email" name="reply_to" id="reply_to" required>
+                </div>
+                <button type="submit" id="button">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Contador de visitas -->
+        <div class="visit-counter" id="contador">
+            Número de visitas: Cargando...
+        </div>
+    </div>
+
+    <!-- Script de EmailJS para el formulario -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('HRyrshbj85LZZlVZ6'); // Reemplaza con tu verdadero User ID
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('button').value = 'Enviando...';
+
+            const serviceID = 'service_8m20niq';
+            const templateID = 'template_t3sv0wt';
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    document.getElementById('button').value = 'Enviar';
+                    alert('¡Correo enviado con éxito!');
+                }, (err) => {
+                    document.getElementById('button').value = 'Enviar';
+                    alert('Error al enviar el correo: ' + JSON.stringify(err));
+                });
+        });
+    </script>
+</body>
+</html>

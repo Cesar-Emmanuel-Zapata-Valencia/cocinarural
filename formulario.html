@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen sobre la Elaboración del Mole de Olla</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Examen sobre la Elaboración del Mole de Olla</h1>
+<form id="examen">
+    <div class="question">
+        <p>1. ¿Cuál es el ingrediente principal del mole de olla?</p>
+        <label><input type="radio" name="q1" value="a"> Carne de res</label>
+        <label><input type="radio" name="q1" value="b"> Pollo</label>
+        <label><input type="radio" name="q1" value="c"> Cerdo</label>
+        <label><input type="radio" name="q1" value="d"> Pescado</label>
+    </div>
+
+    <div class="question">
+        <p>2. Verdadero o Falso: El mole de olla se puede preparar sin chiles.</p>
+        <label><input type="radio" name="q2" value="true"> Verdadero</label>
+        <label><input type="radio" name="q2" value="false"> Falso</label>
+    </div>
+
+    <div class="question">
+        <p>3. ¿Qué tipo de chiles se utilizan comúnmente en el mole de olla?</p>
+        <label><input type="radio" name="q3" value="a"> Chiles guajillo y ancho</label>
+        <label><input type="radio" name="q3" value="b"> Chiles jalapeños</label>
+        <label><input type="radio" name="q3" value="c"> Chiles habaneros</label>
+        <label><input type="radio" name="q3" value="d"> Chiles serranos</label>
+    </div>
+
+    <div class="question">
+        <p>4. Verdadero o Falso: El mole de olla lleva verduras como zanahorias y calabacitas.</p>
+        <label><input type="radio" name="q4" value="true"> Verdadero</label>
+        <label><input type="radio" name="q4" value="false"> Falso</label>
+    </div>
+
+    <div class="question">
+        <p>5. ¿Cuál es el propósito de añadir epazote al mole de olla?</p>
+        <label><input type="radio" name="q5" value="a"> Dar sabor</label>
+        <label><input type="radio" name="q5" value="b"> Espesar el caldo</label>
+        <label><input type="radio" name="q5" value="c"> Reducir la acidez</label>
+        <label><input type="radio" name="q5" value="d"> Aumentar la textura</label>
+    </div>
+
+    <div class="question">
+        <p>6. Verdadero o Falso: El mole de olla se sirve tradicionalmente con arroz y tortillas.</p>
+        <label><input type="radio" name="q6" value="true"> Verdadero</label>
+        <label><input type="radio" name="q6" value="false"> Falso</label>
+    </div>
+
+    <div class="question">
+        <p>7. ¿Qué tan importante es el tiempo de cocción en la preparación del mole de olla?</p>
+        <label><input type="radio" name="q7" value="a"> Muy importante</label>
+        <label><input type="radio" name="q7" value="b"> Algo importante</label>
+        <label><input type="radio" name="q7" value="c"> No muy importante</label>
+        <label><input type="radio" name="q7" value="d"> No es importante</label>
+    </div>
+
+    <div class="question">
+        <p>8. ¿Te gustaría añadir algún ingrediente especial en el mole de olla? (e.g., garbanzos, elote)</p>
+        <label><input type="radio" name="q8" value="a"> Sí, definitivamente</label>
+        <label><input type="radio" name="q8" value="b"> Me gustaría, pero no es esencial</label>
+        <label><input type="radio" name="q8" value="c"> No, prefiero la receta tradicional</label>
+        <label><input type="radio" name="q8" value="d"> No estoy seguro</label>
+    </div>
+
+    <div class="question">
+        <p>9. Verdadero o Falso: El mole de olla siempre debe ser picante.</p>
+        <label><input type="radio" name="q9" value="true"> Verdadero</label>
+        <label><input type="radio" name="q9" value="false"> Falso</label>
+    </div>
+
+    <div class="question">
+        <p>10. ¿Cuál es la mejor manera de servir el mole de olla?</p>
+        <label><input type="radio" name="q10" value="a"> Con arroz</label>
+        <label><input type="radio" name="q10" value="b"> Con tortillas</label>
+        <label><input type="radio" name="q10" value="c"> Con aguacate</label>
+        <label><input type="radio" name="q10" value="d"> Todas las anteriores</label>
+    </div>
+
+<button type="button" onclick="calificar()">Enviar</button>
+
+</form>
+
+<div id="resultado"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
